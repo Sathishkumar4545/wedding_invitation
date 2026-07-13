@@ -1,6 +1,6 @@
 export interface HeroModel {
-  brideName: string;
   groomName: string;
+  brideName: string;
   invitationText: string;
   familyMessage: string;
   weddingDate: string;

@@ -1,9 +1,19 @@
-import { Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component
+} from '@angular/core';
+
+import { EVENTS_DATA } from '../../../../core/constants/events.data';
 
 @Component({
   selector: 'app-events',
-  imports: [],
+  standalone: true,
   templateUrl: './events.html',
   styleUrl: './events.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Events {}
+export class Events {
+
+  readonly events = EVENTS_DATA;
+
+}

@@ -1,15 +1,10 @@
-import { HeroModel } from '../models/hero.model';
+import { WEDDING_DETAILS } from './wedding.constants';
 
-export const HERO_DATA: HeroModel = {
-  brideName: 'Emma',
-  groomName: 'Daniel',
-
-  familyMessage: 'Together with their families',
-
-  invitationText:
-    'Request the pleasure of your company at the celebration of their wedding',
-
-  weddingDate: 'Saturday • 18 December 2027',
-
-  buttonText: 'Open Invitation'
+export const HERO_DATA = {
+  brideName: WEDDING_DETAILS.brideName,
+  groomName: WEDDING_DETAILS.groomName,
+  familyMessage: WEDDING_DETAILS.familyMessage,
+  invitationText: WEDDING_DETAILS.invitationText,
+  weddingDate: WEDDING_DETAILS.weddingDateText,
+  buttonText: 'Open Invitation',
 };

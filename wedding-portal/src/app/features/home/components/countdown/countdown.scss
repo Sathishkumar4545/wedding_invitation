@@ -1,0 +1,49 @@
+@use "../../../../../styles/abstracts/variables" as *;
+
+.countdown {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.count-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: $shadow-sm;
+}
+
+.count-card span {
+  display: block;
+  font-size: 3rem;
+  color: $color-primary;
+  font-weight: 700;
+}
+
+.count-card small {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $color-muted;
+}
+
+@media (max-width: 768px) {
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

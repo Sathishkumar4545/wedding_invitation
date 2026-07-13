@@ -12,3 +12,10 @@ html {
 body {
   background: $color-background;
 }
+.container {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+}
+.section {
+  padding: 100px 0;
+}
