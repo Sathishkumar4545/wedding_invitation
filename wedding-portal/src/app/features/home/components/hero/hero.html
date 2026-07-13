@@ -1,0 +1,58 @@
+<section id="hero" class="hero">
+  <img
+  class="flower flower-left"
+  src="images/hero/flowers-left.png"
+  alt="">
+
+  <img
+  class="flower flower-right"
+  src="images/hero/flowers-right.png"
+  alt="">
+
+  <div class="container">
+
+    <!-- Left Content -->
+    <div class="hero-content">
+
+      <p class="hero-family">
+        {{ hero.familyMessage }}
+      </p>
+
+      <h1 class="hero-title">
+        {{ hero.groomName }}
+        <span>&</span>
+        {{ hero.brideName }}
+      </h1>
+
+      <p class="hero-description">
+        {{ hero.invitationText }}
+      </p>
+
+      <div class="hero-divider"></div>
+
+      <p class="hero-date">
+        {{ hero.weddingDate }}
+      </p>
+
+      <button class="btn">
+        {{ hero.buttonText }}
+      </button>
+
+    </div>
+
+    <!-- Right Image -->
+
+    <div class="hero-image">
+
+      <img
+        src="assets/images/hero/couple-placeholder.jpg"
+        alt="Couple">
+
+    </div>
+
+  </div>
+  <div class="scroll-indicator">
+    ↓
+  </div>
+
+</section>

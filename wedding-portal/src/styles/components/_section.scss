@@ -1,0 +1,19 @@
+.section {
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:100px 0;
+
+}
+
+.section-container{
+
+  width:min(1200px,90%);
+
+  margin:auto;
+
+}
