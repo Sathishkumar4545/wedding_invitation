@@ -1,51 +1,113 @@
+@use "../../../../../styles/variables" as *;
+
 .hero {
   height: 100vh;
-  background: linear-gradient(
-      rgba(250, 247, 242, 0.85),
-      rgba(250, 247, 242, 0.85)
-    ),
-    url('https://images.unsplash.com/photo-1519741497674-611481863552')
-      center/cover no-repeat;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
   text-align: center;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      rgba(250,247,242,.85),
+      rgba(250,247,242,.85)
+    ),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552")
+      center center/cover no-repeat;
 }
 
-.overlay {
+.hero-content {
+
   max-width: 700px;
-  padding: 30px;
+
 }
 
-.subtitle {
-  letter-spacing: 3px;
+.tagline {
+
   text-transform: uppercase;
+
+  letter-spacing: 4px;
+
+  font-size: .9rem;
+
+  color: $color-primary;
+
 }
 
 h1 {
+
+  margin: 25px 0;
+
   font-size: 5rem;
-  margin: 20px 0;
+
+  line-height: 1.1;
+
 }
 
-span {
-  color: #c9a227;
+.ampersand {
+
+  display:block;
+
+  color:$color-secondary;
+
 }
 
-.date {
-  margin: 30px 0;
+.description{
+
+  margin-top:20px;
+
+  font-size:1.2rem;
+
+  line-height:2rem;
+
 }
 
-button {
-  background: #8b5e3c;
-  color: white;
-  padding: 14px 35px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: .3s;
+.date{
+
+  margin:35px 0;
+
+  font-size:1.1rem;
+
 }
 
-button:hover {
-  transform: translateY(-3px);
+button{
+
+  padding:15px 40px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:$color-primary;
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:$transition;
+
+}
+
+button:hover{
+
+  transform:translateY(-4px);
+
+}
+
+.scroll{
+
+  margin-top:70px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+
+  font-size:.9rem;
+
 }

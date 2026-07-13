@@ -1,35 +1,53 @@
-<section class="hero">
+<section id="hero" class="hero">
 
-  <div class="overlay">
+    <div class="hero-content">
 
-    <p class="subtitle">
-      Together with their families
-    </p>
+        <span class="tagline">
+            {{ hero.familyMessage }}
+        </span>
 
-    <h1>
-      Emma
-      <span>&</span>
-      Daniel
-    </h1>
+        <h1>
 
-    <p class="invite">
-      Request the pleasure of your company
-      <br>
-      at the celebration of their wedding
-    </p>
+            {{ hero.brideName }}
 
-    <div class="date">
-      Saturday • 18 December 2027
+            <span class="ampersand">
+                &
+            </span>
+
+            {{ hero.groomName }}
+
+        </h1>
+
+        <p class="description">
+
+            {{ hero.invitationText }}
+
+        </p>
+
+        <div class="date">
+
+            {{ hero.weddingDate }}
+
+        </div>
+
+        <button>
+
+            {{ hero.buttonText }}
+
+        </button>
+
+        <div class="scroll">
+
+            Scroll
+
+            <span>
+
+                ↓
+
+            </span>
+
+        </div>
+
     </div>
-
-    <button>
-      Open Invitation
-    </button>
-
-    <div class="scroll">
-      ↓ Scroll
-    </div>
-
-  </div>
 
 </section>

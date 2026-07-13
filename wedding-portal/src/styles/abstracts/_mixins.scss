@@ -1,0 +1,24 @@
+@mixin flex-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@mixin container {
+
+  width:min(1200px,90%);
+  margin-inline:auto;
+
+}
+
+@mixin button-hover {
+
+  transition:.3s;
+
+  &:hover{
+
+    transform:translateY(-3px);
+
+  }
+
+}

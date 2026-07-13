@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+.btn{
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 34px;
+
+  border:none;
+
+  border-radius:$radius-lg;
+
+  background:$color-primary;
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:$transition;
+
+}
+
+.btn:hover{
+
+  background:$color-secondary;
+
+}
