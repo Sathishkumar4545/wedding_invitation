@@ -1,53 +1,46 @@
 <section id="hero" class="hero">
 
+  <div class="container">
+
+    <!-- Left Content -->
     <div class="hero-content">
 
-        <span class="tagline">
-            {{ hero.familyMessage }}
-        </span>
+      <p class="hero-family">
+        {{ hero.familyMessage }}
+      </p>
 
-        <h1>
+      <h1 class="hero-title">
+        {{ hero.brideName }}
+        <span>&</span>
+        {{ hero.groomName }}
+      </h1>
 
-            {{ hero.brideName }}
+      <p class="hero-description">
+        {{ hero.invitationText }}
+      </p>
 
-            <span class="ampersand">
-                &
-            </span>
+      <div class="hero-divider"></div>
 
-            {{ hero.groomName }}
+      <p class="hero-date">
+        {{ hero.weddingDate }}
+      </p>
 
-        </h1>
-
-        <p class="description">
-
-            {{ hero.invitationText }}
-
-        </p>
-
-        <div class="date">
-
-            {{ hero.weddingDate }}
-
-        </div>
-
-        <button>
-
-            {{ hero.buttonText }}
-
-        </button>
-
-        <div class="scroll">
-
-            Scroll
-
-            <span>
-
-                ↓
-
-            </span>
-
-        </div>
+      <button class="btn">
+        {{ hero.buttonText }}
+      </button>
 
     </div>
+
+    <!-- Right Image -->
+
+    <div class="hero-image">
+
+      <img
+        src="assets/images/hero/couple-placeholder.jpg"
+        alt="Couple">
+
+    </div>
+
+  </div>
 
 </section>

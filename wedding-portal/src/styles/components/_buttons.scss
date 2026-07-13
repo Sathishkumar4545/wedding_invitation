@@ -2,23 +2,19 @@
 
 .btn{
 
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+background:linear-gradient(
+45deg,
+#8B5E3C,
+#A9745B
+);
 
-  padding:14px 34px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 
-  border:none;
+font-size:18px;
 
-  border-radius:$radius-lg;
+font-weight:500;
 
-  background:$color-primary;
-
-  color:white;
-
-  cursor:pointer;
-
-  transition:$transition;
+padding:18px 40px;
 
 }
 
