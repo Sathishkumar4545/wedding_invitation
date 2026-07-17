@@ -25,3 +25,34 @@ button {
   cursor: pointer;
   font-size: 18px;
 }
+.music-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  width: 56px;
+  height: 56px;
+
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+
+  font-size: 1.4rem;
+
+  transition: all .3s ease;
+
+  z-index: 9999;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}

@@ -1,1 +1,7 @@
+<audio #bgMusic src="assets/music/bgm.mp3" loop preload="auto"></audio>
+
+<button class="music-btn" (click)="toggleMusic()">
+  {{ isPlaying ? '🔊' : '🔇' }}
+</button>
+
 <router-outlet />
