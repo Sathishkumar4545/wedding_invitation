@@ -3,6 +3,7 @@ import { Navbar } from '../../layout/navbar/navbar';
 import { Hero } from './components/hero/hero';
 import { Countdown } from './components/countdown/countdown';
 import { Events } from './components/events/events';
+import { Contact } from './components/contact/contact';
 import { Story } from './components/story/story';
 
 @Component({
@@ -13,7 +14,8 @@ import { Story } from './components/story/story';
   Hero,
   Countdown,
   Story,
-  Events
+  Events,
+  Contact
 ],
   templateUrl: './home.html',
   styleUrl: './home.scss'

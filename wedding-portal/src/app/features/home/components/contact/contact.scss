@@ -1,0 +1,149 @@
+@use "../../../../../styles/abstracts/variables" as *;
+
+.contact {
+  min-height: auto;
+  align-items: stretch;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.contact-copy {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.88)),
+    linear-gradient(135deg, rgba(139, 94, 60, .08), rgba(201, 162, 39, .08));
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+.contact-copy::before {
+  content: "";
+  position: absolute;
+  inset: auto -5rem -5rem auto;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 162, 39, .18), transparent 65%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin-bottom: .75rem;
+  color: $color-primary;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: left;
+  font-size: clamp(2.25rem, 4vw, 3.4rem);
+}
+
+.section-subtitle {
+  max-width: 42rem;
+  margin: 1rem 0 0;
+  color: $color-muted;
+  text-align: left;
+}
+
+.details {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.detail-card {
+  padding: 1rem 1.15rem;
+  border-radius: 18px;
+  background: $color-surface;
+  border: 1px solid $color-border;
+}
+
+.detail-label {
+  display: block;
+  margin-bottom: .35rem;
+  color: $color-muted;
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.detail-card strong {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+}
+
+.btn {
+  justify-content: center;
+  min-width: 11rem;
+  text-decoration: none;
+}
+
+.map-btn {
+  color: #fff;
+}
+
+.map-btn:hover {
+  color: #fff;
+}
+
+.map-card {
+  min-height: 34rem;
+  padding: .8rem;
+  border-radius: 28px;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 32rem;
+  border: 0;
+  border-radius: 22px;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-card {
+    min-height: 24rem;
+  }
+
+  .map-card iframe {
+    min-height: 22rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-copy {
+    padding: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

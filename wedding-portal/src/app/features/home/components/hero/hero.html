@@ -1,58 +1,150 @@
 <section id="hero" class="hero">
-  <img
-  class="flower flower-left"
-  src="images/hero/flowers-left.png"
-  alt="">
-
-  <img
-  class="flower flower-right"
-  src="images/hero/flowers-right.png"
-  alt="">
 
   <div class="container">
 
-    <!-- Left Content -->
     <div class="hero-content">
 
-      <p class="hero-family">
-        {{ hero.familyMessage }}
-      </p>
+      <div class="hero-text">
 
-      <h1 class="hero-title">
-        {{ hero.groomName }}
-        <span>&</span>
-        {{ hero.brideName }}
-      </h1>
+        <p class="hero-together-text">
+          TOGETHER WITH THEIR FAMILIES
+        </p>
 
-      <p class="hero-description">
-        {{ hero.invitationText }}
-      </p>
+        <h1 class="hero-title">
+          {{ hero.groomName }}
+        </h1>
 
-      <div class="hero-divider"></div>
+        <span class="ampersand">&</span>
 
-      <p class="hero-date">
-        {{ hero.weddingDate }}
-      </p>
+        <h1 class="hero-title">
+          {{ hero.brideName }}
+        </h1>
 
-      <button class="btn">
-        {{ hero.buttonText }}
-      </button>
+        <p class="hero-invitation-text">
+          {{ hero.invitationText }}
+        </p>
 
-    </div>
+        <div class="hero-divider"></div>
 
-    <!-- Right Image -->
+        <p class="hero-date">
+          {{ hero.weddingDate }}
+        </p>
 
-    <div class="hero-image">
+        @if (!showInvitation) {
+          <button 
+            class="btn"
+            (click)="toggleInvitation()">
+            {{ hero.buttonText }}
+          </button>
+        }
 
-      <img
-        src="assets/images/hero/couple-placeholder.jpg"
-        alt="Couple">
+      </div>
+
+      <div class="hero-image">
+
+        <img 
+          src="assets/images/hero/couple-placeholder.jpg" 
+          alt="Wedding couple"
+          class="couple-image">
+
+      </div>
 
     </div>
 
   </div>
-  <div class="scroll-indicator">
-    ↓
-  </div>
+
+  @if (showInvitation) {
+
+    <div class="invitation-modal">
+
+      <div class="modal-content">
+
+        <button 
+          class="close-btn"
+          (click)="toggleInvitation()">
+          ×
+        </button>
+
+        @if (!selectedLanguage) {
+
+          <div class="language-selector">
+
+            <h2>Choose Language</h2>
+
+            <div class="language-buttons">
+
+              @for (language of invitationLanguages; track language.key) {
+
+                <button 
+                  class="btn language-btn"
+                  (click)="selectLanguage(language.key)">
+                  {{ language.label }}
+                </button>
+
+              }
+
+            </div>
+
+          </div>
+
+        } @else {
+
+          <div class="invitation-viewer">
+
+            <h2>{{ activeInvitation?.heading }}</h2>
+
+            <div class="invitation-images">
+
+              @for (image of activeInvitation?.images; track image.src) {
+
+                <img 
+                  [src]="image.src" 
+                  [alt]="image.alt"
+                  class="invitation-image"
+                  (click)="openImage(image)"
+                  loading="lazy">
+
+              }
+
+            </div>
+
+            <button 
+              class="btn secondary"
+              (click)="selectedLanguage = null">
+              Back to Languages
+            </button>
+
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  }
+
+  @if (selectedImage) {
+
+    <div class="image-modal" (click)="closeImage()">
+
+      <div class="modal-image-content" (click)="$event.stopPropagation()">
+
+        <button 
+          class="close-btn"
+          (click)="closeImage()">
+          ×
+        </button>
+
+        <img 
+          [src]="selectedImage.src" 
+          [alt]="selectedImage.alt"
+          class="modal-image">
+
+      </div>
+
+    </div>
+
+  }
 
 </section>

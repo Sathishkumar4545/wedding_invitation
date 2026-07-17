@@ -3,6 +3,7 @@
 html{
 
   scroll-behavior:smooth;
+  scroll-padding-top: clamp(150px, 16vw, 200px);
 
 }
 
@@ -24,4 +25,8 @@ button{
 
   font-family:inherit;
 
+}
+
+section[id] {
+  scroll-margin-top: clamp(150px, 16vw, 200px);
 }
