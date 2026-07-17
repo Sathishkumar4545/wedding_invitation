@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { HERO_DATA } from '../../../../core/constants/hero.data';
+import { MusicService } from '../../../../services/music.service';
 
 type InvitationLanguageKey = 'english' | 'tamil';
 
@@ -17,10 +18,13 @@ interface InvitationLanguage {
   selector: 'app-hero',
   standalone: true,
   imports: [],
-  templateUrl: './hero.html',
-  styleUrl: './hero.scss'
+  templateUrl: './intro.html',
+  styleUrl: './intro.scss'
 })
 export class Hero {
+    constructor(
+    private musicService: MusicService
+  ) {}
   readonly hero = HERO_DATA;
 
   readonly invitationLanguages: InvitationLanguage[] = [
@@ -48,6 +52,11 @@ export class Hero {
   showInvitation = false;
   selectedLanguage: InvitationLanguageKey | null = null;
   selectedImage: { src: string; alt: string } | null = null;
+
+  openInvitation(): void {
+    this.showInvitation = true;
+    this.musicService.play();
+  }
 
   toggleInvitation(): void {
     this.showInvitation = !this.showInvitation;

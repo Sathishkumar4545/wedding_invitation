@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Navbar } from '../../layout/navbar/navbar';
-import { Hero } from './components/hero/hero';
+import { Hero } from './components/intro/intro';
 import { Countdown } from './components/countdown/countdown';
 import { Events } from './components/events/events';
 import { Contact } from './components/contact/contact';
