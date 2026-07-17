@@ -6,8 +6,8 @@ export const WEDDING_DETAILS = {
 
   weddingDateText: 'Saturday • 29 August 2026',
 
-  familyMessage: 'Together with their families',
+  familyMessage: 'Together with our families',
 
   invitationText:
-    'Request the pleasure of your company at the celebration of their wedding',
+    'Request the pleasure of your company as we celebrate our special day.',
 };

@@ -1,75 +1,90 @@
 <section id="contact" class="section contact">
 
-  <div class="container contact-grid">
+  <div class="container">
 
-    <div class="contact-copy">
-
-      <p class="eyebrow">
-        Contact & Directions
-      </p>
+    <div class="section-header">
 
       <h2 class="section-title">
-        Find us on Google Maps
+        Join Us at the Venue
       </h2>
 
       <p class="section-subtitle">
-        Open the venue in one tap to see the route, nearby landmarks, and the best way to arrive.
+        We look forward to welcoming you.
+        Tap below for directions and the easiest route to the venue.
       </p>
-
-      <div class="details">
-
-        <div class="detail-card">
-
-          <span class="detail-label">Venue</span>
-
-          <strong>{{ venueName }}</strong>
-
-        </div>
-
-        <div class="detail-card">
-
-          <span class="detail-label">Address</span>
-
-          <strong>{{ venueAddress }}</strong>
-
-        </div>
-
-      </div>
-
-      <div class="actions">
-
-        <a
-          class="btn map-btn"
-          [href]="mapsSearchUrl"
-          target="_blank"
-          rel="noreferrer">
-
-          Open in Google Maps
-
-        </a>
-
-        <a
-          class="btn secondary"
-          [href]="directionsUrl"
-          target="_blank"
-          rel="noreferrer">
-
-          Get Directions
-
-        </a>
-
-      </div>
 
     </div>
 
-    <div class="map-card">
+    <div class="contact-grid">
 
-      <iframe
-        [src]="mapEmbedUrl"
-        title="Wedding venue map"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <div class="contact-copy">
+
+        <div class="details">
+
+          <div class="detail-card">
+            <span class="detail-label">Venue</span>
+            <strong>{{ venueName }}</strong>
+          </div>
+
+          <div class="detail-card">
+            <span class="detail-label">Address</span>
+            <strong>{{ venueAddress }}</strong>
+          </div>
+
+          <div class="detail-card">
+
+            <span class="detail-label">Contact</span>
+
+            <div class="contact-person">
+              <strong>Sathishkumar</strong>
+              <span>+91 8940798741</span>
+            </div>
+
+            <div class="contact-person">
+              <strong>Preethi</strong>
+              <span>+91 XXXXXXXXXX</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="actions">
+
+          <a
+            class="btn map-btn"
+            [href]="mapsSearchUrl"
+            target="_blank"
+            rel="noreferrer">
+
+            View on Google Maps
+
+          </a>
+
+          <a
+            class="btn secondary"
+            [href]="directionsUrl"
+            target="_blank"
+            rel="noreferrer">
+
+            Get Directions
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="map-card">
+
+        <iframe
+          [src]="mapEmbedUrl"
+          title="Wedding venue map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
 
     </div>
 
