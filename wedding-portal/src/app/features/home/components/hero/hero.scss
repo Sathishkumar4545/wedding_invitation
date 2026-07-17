@@ -1,179 +1,504 @@
+/* ==========================================================
+   Invitation Modal
+========================================================== */
 @use "../../../../../styles/abstracts/variables" as *;
 
+/* ==========================================================
+   Hero Section
+========================================================== */
+
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 120px 0 80px;
+
+  overflow: hidden;
+
   background:
     linear-gradient(
-    rgba(250,247,242,.85),
-    rgba(250,247,242,.85)
+      rgba(250, 247, 242, 0.94),
+      rgba(250, 247, 242, 0.94)
     ),
-    url("/images/hero/hero-bg.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-  padding: 110px 0 60px;
+    url("/images/hero/hero-bg.jpg") center/cover no-repeat;
 }
 
 .container {
-  width: min(1200px, 90%);
+  width: min(1280px, 92%);
   margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
 }
 
 .hero-content {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.hero-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.hero-family {
+.hero-together-text {
+  margin-bottom: 2rem;
+
+  font-family: $font-body;
+  font-size: .95rem;
+
+  letter-spacing: 8px;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  color: $color-primary;
-  font-size: 14px;
+
+  color: #A17C52;
 }
 
-.hero-title{
-font-size:5.8rem;
-font-weight:700;
-letter-spacing:2px;
+.hero-title {
+  margin: 0;
+
+  font-family: $font-heading;
+  font-size: clamp(5rem, 8vw, 7rem);
+  font-weight: 600;
+
+  line-height: .88;
+
+  color: #493438;
+
+  letter-spacing: -.03em;
 }
 
-.hero-title span {
-  display: block;
-  color: $color-secondary;
+.ampersand {
+  margin: 1rem 0;
+
+  font-family: $font-heading;
+  font-size: 5.5rem;
+
+  line-height: 1;
+
+  color: #C89B2C;
 }
 
-.hero-description {
-  max-width: 500px;
+.hero-invitation-text {
+  max-width: 520px;
+
+  margin: 2.2rem 0;
+
+  font-family: $font-body;
+
+  font-size: 1.3rem;
+
   line-height: 1.8;
-  margin-bottom: 30px;
+
+  color: #3B2E2F;
 }
 
-.hero-divider{
-height:2px;
-width:140px;
-margin:30px 0;
-background:
-linear-gradient(
-90deg,
-transparent,
-#C9A227,
-transparent
-);
+.hero-divider {
+  width: 180px;
+  height: 2px;
+
+  margin: 2rem 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #D6B55A,
+    transparent
+  );
 }
 
-.hero-date{
-font-size:20px;
-letter-spacing:2px;
-font-weight:500;
+.hero-date {
+  margin-bottom: 2.5rem;
+
+  font-family: $font-body;
+
+  font-size: 1.8rem;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: #493438;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 40px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: #C89B2C;
+
+  color: #fff;
+
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.btn:hover {
+  background: #B98A1D;
+  transform: translateY(-3px);
 }
 
 .hero-image {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.hero-image img {
+.couple-image {
   width: 100%;
-  max-width: 450px;
-  border-radius: 24px;
-  display: block;
+  max-width: 470px;
+
+  border-radius: 28px;
+
   object-fit: cover;
-  box-shadow: $shadow-md;
+
+  box-shadow: 0 30px 70px rgba(0,0,0,.18);
+
+  transition: transform .35s ease;
 }
 
-/* Tablet */
+.couple-image:hover {
+  transform: scale(1.02);
+}
+
+/* ==========================================================
+   Responsive
+========================================================== */
 
 @media (max-width: 992px) {
 
-  .container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 3rem;
+  .hero {
+    padding-top: 100px;
   }
 
   .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    text-align: center;
+  }
+
+  .hero-text {
     align-items: center;
   }
 
-  .hero-description {
-    max-width: 100%;
+  .hero-invitation-text {
+    margin-inline: auto;
   }
 
-  .hero-divider{
-  height:2px;
-  width:140px;
-  margin:30px 0;
-  background:
-  linear-gradient(
-  90deg,
-  transparent,
-  #C9A227,
-  transparent
-  );
+  .hero-divider {
+    margin-inline: auto;
   }
 
-  .hero-title{
-  font-size:5.8rem;
-  font-weight:700;
-  letter-spacing:2px;
+  .hero-title {
+    font-size: 4rem;
   }
 
+  .ampersand {
+    font-size: 3rem;
+  }
+
+  .hero-date {
+    font-size: 1.3rem;
+  }
+
+  .couple-image {
+    max-width: 360px;
+  }
 }
 
-/* Mobile */
-
-@media (max-width: 576px) {
+@media (max-width:576px){
 
   .hero-title{
-  font-size:5.8rem;
-  font-weight:700;
-  letter-spacing:2px;
+    font-size:3rem;
   }
 
-  .hero-image img {
-    max-width: 320px;
+  .hero-together-text{
+    letter-spacing:4px;
+    font-size:.8rem;
   }
 
-  .flower{
-
-  position:absolute;
-
-  width:220px;
-
-  opacity:.22;
-
-  pointer-events:none;
-
+  .hero-invitation-text{
+    font-size:1rem;
   }
 
-  .flower-left{
-
-  top:0;
-
-  left:0;
-
+  .hero-date{
+    font-size:1rem;
   }
 
-  .flower-right{
-
-  right:0;
-
-  bottom:0;
-
+  .couple-image{
+    max-width:300px;
   }
-  .scroll-indicator{
-  margin-top:60px;
-  font-size:40px;
-  animation:
-  floating 2s infinite;
+}
+/* ==========================================================
+   Invitation Modal
+========================================================== */
+
+.invitation-modal,
+.image-modal {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+}
+
+.modal-content,
+.modal-image-content {
+  position: relative;
+
+  width: min(1000px, 95vw);
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 2.5rem;
+
+  border-radius: 24px;
+
+  background: #fff;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, .25);
+
+  animation: modalFade .35s ease;
+}
+
+@keyframes modalFade {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.close-btn {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #493438;
+
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.close-btn:hover {
+  background: #C89B2C;
+  transform: rotate(90deg);
+}
+
+/* ==========================================================
+   Language Selector
+========================================================== */
+
+.language-selector {
+  text-align: center;
+}
+
+.language-selector h2 {
+  margin-bottom: 2rem;
+
+  font-family: $font-heading;
+
+  font-size: 2.3rem;
+
+  color: #493438;
+}
+
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.language-btn {
+  min-width: 180px;
+}
+
+/* ==========================================================
+   Invitation Viewer
+========================================================== */
+
+.invitation-viewer h2 {
+  margin-bottom: 2rem;
+
+  text-align: center;
+
+  font-family: $font-heading;
+
+  font-size: 2.5rem;
+
+  color: #493438;
+}
+
+.invitation-images {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 2rem;
+}
+
+.invitation-image {
+
+  width: 100%;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+
+  transition: all .35s ease;
+}
+
+.invitation-image:hover {
+
+  transform: translateY(-6px) scale(1.03);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+}
+
+/* ==========================================================
+   Image Preview
+========================================================== */
+
+.modal-image-content {
+  width: auto;
+  max-width: 90vw;
+
+  padding: 1rem;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.modal-image {
+
+  display: block;
+
+  max-width: 100%;
+  max-height: 85vh;
+
+  border-radius: 18px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
+}
+
+/* ==========================================================
+   Secondary Button
+========================================================== */
+
+.secondary {
+
+  margin-top: 2rem;
+
+  background: transparent;
+
+  color: #493438;
+
+  border: 2px solid #C89B2C;
+}
+
+.secondary:hover {
+
+  background: #C89B2C;
+
+  color: white;
+}
+
+/* ==========================================================
+   Scrollbar
+========================================================== */
+
+.modal-content::-webkit-scrollbar {
+
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+
+  background: #C89B2C;
+
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+
+  background: #F5F5F5;
+}
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width:768px) {
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+
+  .language-buttons {
+    flex-direction: column;
+  }
+
+  .language-btn {
+    width: 100%;
+  }
+
+  .invitation-images {
+    grid-template-columns: 1fr;
+  }
+
+  .invitation-viewer h2,
+  .language-selector h2 {
+    font-size: 2rem;
+  }
+
+  .close-btn {
+    width: 38px;
+    height: 38px;
+
+    font-size: 22px;
   }
 }

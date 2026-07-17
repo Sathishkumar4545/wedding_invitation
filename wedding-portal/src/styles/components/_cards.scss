@@ -1,0 +1,136 @@
+@use "../abstracts/variables" as *;
+
+.invitation-panel {
+  width: min(100%, 760px);
+  margin-top: 1.5rem;
+  padding: 1.8rem;
+  border: 1px solid $color-border;
+  border-radius: 24px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 18px 40px rgba(139,94,60,.12);
+}
+
+.invitation-panel-header {
+  text-align: left;
+}
+
+.invitation-kicker {
+  margin-bottom: .65rem;
+  color: $color-primary;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.invitation-panel h2 {
+  margin-bottom: .75rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+}
+
+.invitation-copy {
+  color: $color-muted;
+  line-height: 1.75;
+}
+
+.language-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem;
+  margin-top: 1.5rem;
+}
+
+.language-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .92rem 1.25rem;
+  border: 1px solid rgba(139,94,60,.18);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255,255,255,.98), rgba(248,241,231,.98));
+  color: $color-text;
+  box-shadow: 0 10px 22px rgba(139,94,60,.08);
+  cursor: pointer;
+}
+
+.language-tab.active {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #8b5e3c, #c98f48);
+  box-shadow: 0 14px 26px rgba(139,94,60,.24);
+}
+
+.invitation-gallery {
+  margin-top: 1.75rem;
+}
+
+.invitation-gallery h3 {
+  margin-bottom: 1rem;
+  color: $color-primary;
+  font-size: 1.35rem;
+}
+
+.invitation-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.invitation-image-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  background: $color-surface;
+  box-shadow: 0 12px 26px rgba(139, 94, 60, .12);
+  cursor: zoom-in;
+}
+
+.invitation-image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(24,16,12,.84);
+  backdrop-filter: blur(6px);
+}
+
+.lightbox img {
+  max-width: min(92vw, 960px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .38);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  color: $color-primary;
+  font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .24);
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  transform: translateY(-1px);
+}

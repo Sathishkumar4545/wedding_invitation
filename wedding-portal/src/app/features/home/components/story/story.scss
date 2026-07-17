@@ -1,0 +1,25 @@
+@use "../../../../../styles/abstracts/variables" as *;
+
+.story {
+  min-height: auto;
+  align-items: flex-start;
+  padding: 2rem 0 4rem;
+  background: $color-surface;
+  scroll-margin-top: 6.5rem;
+}
+
+.story .container {
+  padding-top: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: $color-muted;
+  margin: 18px auto 0;
+  max-width: 42rem;
+}

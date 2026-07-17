@@ -1,0 +1,51 @@
+@use "../../../../src/styles/abstracts/variables" as *;
+.footer {
+  background: #f9f6f0;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.divider {
+  color: #c89b2c;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+h2 {
+  font-family: $font-heading;
+  font-size: 3rem;
+  color: #493438;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-family: $font-body;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #493438;
+}
+
+.flourish {
+  color: #c89b2c;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+}
+
+.with-love {
+  margin-top: 1rem;
+  font-family: $font-heading;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: .75rem;
+  font-family: $font-heading;
+  font-size: 2.5rem;
+  color: #493438;
+}
