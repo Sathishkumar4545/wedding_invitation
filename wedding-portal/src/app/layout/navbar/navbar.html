@@ -3,21 +3,26 @@
   <div class="container">
 
     <div class="logo">
-      <span class="logo-mark" aria-hidden="true">SP</span>
-      <span class="logo-text">Forever &amp; Always</span>
+
+      <div class="logo-mark">
+        <span class="initial">S</span>
+        <span class="divider">❤️</span>
+        <span class="initial">P</span>
+      </div>
+
+      <span class="logo-text">
+        Forever &amp; Always
+      </span>
+
     </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" [class.open]="mobileMenuOpen()">
 
-      <li><a href="#hero">Home</a></li>
-
-      <li><a href="#countdown">Countdown</a></li>
-
-      <li><a href="#story">Story</a></li>
-
-      <li><a href="#events">Events</a></li>
-
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hero" (click)="mobileMenuOpen.set(false)">Home</a></li>
+      <li><a href="#countdown" (click)="mobileMenuOpen.set(false)">Countdown</a></li>
+      <li><a href="#story" (click)="mobileMenuOpen.set(false)">Story</a></li>
+      <li><a href="#events" (click)="mobileMenuOpen.set(false)">Events</a></li>
+      <li><a href="#contact" (click)="mobileMenuOpen.set(false)">Contact</a></li>
 
     </ul>
 

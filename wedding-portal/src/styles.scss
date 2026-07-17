@@ -24,3 +24,10 @@ h2,
 h3 {
   font-family: 'Playfair Display', serif;
 }
+
+section {
+  scroll-margin-top: 100px;
+}
+html {
+  scroll-behavior: smooth;
+}
