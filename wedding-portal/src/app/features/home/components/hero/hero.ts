@@ -75,6 +75,10 @@ export class Hero {
 
   @HostListener('document:keydown.escape')
   onEscape(): void {
-    this.closeImage();
+    if (this.selectedImage) {
+      this.closeImage();
+    } else if (this.showInvitation) {
+      this.toggleInvitation();
+    }
   }
 }

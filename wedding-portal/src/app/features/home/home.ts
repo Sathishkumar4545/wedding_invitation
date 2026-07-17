@@ -5,6 +5,7 @@ import { Countdown } from './components/countdown/countdown';
 import { Events } from './components/events/events';
 import { Contact } from './components/contact/contact';
 import { Story } from './components/story/story';
+import { FooterComponent } from '../../layout/footer/footer.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ import { Story } from './components/story/story';
   Countdown,
   Story,
   Events,
-  Contact
+  Contact,
+  FooterComponent
 ],
   templateUrl: './home.html',
   styleUrl: './home.scss'

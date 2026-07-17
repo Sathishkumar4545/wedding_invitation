@@ -14,7 +14,9 @@
           {{ hero.groomName }}
         </h1>
 
-        <span class="ampersand">&</span>
+        <div class="ampersand">
+          &
+        </div>
 
         <h1 class="hero-title">
           {{ hero.brideName }}
@@ -31,20 +33,24 @@
         </p>
 
         @if (!showInvitation) {
-          <button 
+
+          <button
             class="btn"
             (click)="toggleInvitation()">
+
             {{ hero.buttonText }}
+
           </button>
+
         }
 
       </div>
 
       <div class="hero-image">
 
-        <img 
-          src="assets/images/hero/couple-placeholder.jpg" 
-          alt="Wedding couple"
+        <img
+          src="assets/images/hero/couple-placeholder.jpg"
+          alt="Wedding Couple"
           class="couple-image">
 
       </div>
@@ -53,13 +59,15 @@
 
   </div>
 
+  <!-- Invitation Modal -->
+
   @if (showInvitation) {
 
     <div class="invitation-modal">
 
       <div class="modal-content">
 
-        <button 
+        <button
           class="close-btn"
           (click)="toggleInvitation()">
           ×
@@ -75,10 +83,12 @@
 
               @for (language of invitationLanguages; track language.key) {
 
-                <button 
+                <button
                   class="btn language-btn"
                   (click)="selectLanguage(language.key)">
+
                   {{ language.label }}
+
                 </button>
 
               }
@@ -97,21 +107,23 @@
 
               @for (image of activeInvitation?.images; track image.src) {
 
-                <img 
-                  [src]="image.src" 
+                <img
+                  [src]="image.src"
                   [alt]="image.alt"
                   class="invitation-image"
-                  (click)="openImage(image)"
-                  loading="lazy">
+                  loading="lazy"
+                  (click)="openImage(image)">
 
               }
 
             </div>
 
-            <button 
+            <button
               class="btn secondary"
               (click)="selectedLanguage = null">
+
               Back to Languages
+
             </button>
 
           </div>
@@ -124,20 +136,26 @@
 
   }
 
+  <!-- Image Preview -->
+
   @if (selectedImage) {
 
-    <div class="image-modal" (click)="closeImage()">
+    <div
+      class="image-modal"
+      (click)="closeImage()">
 
-      <div class="modal-image-content" (click)="$event.stopPropagation()">
+      <div
+        class="modal-image-content"
+        (click)="$event.stopPropagation()">
 
-        <button 
+        <button
           class="close-btn"
           (click)="closeImage()">
           ×
         </button>
 
-        <img 
-          [src]="selectedImage.src" 
+        <img
+          [src]="selectedImage.src"
           [alt]="selectedImage.alt"
           class="modal-image">
 
