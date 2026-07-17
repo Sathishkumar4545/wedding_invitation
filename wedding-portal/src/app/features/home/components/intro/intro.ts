@@ -17,8 +17,8 @@ interface InvitationLanguage {
   selector: 'app-hero',
   standalone: true,
   imports: [],
-  templateUrl: './hero.html',
-  styleUrl: './hero.scss'
+  templateUrl: './intro.html',
+  styleUrl: './intro.scss'
 })
 export class Hero {
   readonly hero = HERO_DATA;
