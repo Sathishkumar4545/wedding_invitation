@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   ViewChild,
@@ -20,20 +21,34 @@ export class App implements AfterViewInit {
 
   isPlaying = false;
 
+  constructor(private cdr: ChangeDetectorRef) {}
+
   ngAfterViewInit(): void {
-    // Audio is ready
+    const audio = this.bgMusic.nativeElement;
+
+    audio.addEventListener('play', () => {
+      this.isPlaying = true;
+      this.cdr.detectChanges();
+    });
+
+    audio.addEventListener('pause', () => {
+      this.isPlaying = false;
+      this.cdr.detectChanges();
+    });
+
+    audio.addEventListener('ended', () => {
+      this.isPlaying = false;
+      this.cdr.detectChanges();
+    });
   }
 
   toggleMusic(): void {
     const audio = this.bgMusic.nativeElement;
 
     if (audio.paused) {
-      audio.play()
-        .then(() => this.isPlaying = true)
-        .catch(err => console.error(err));
+      audio.play().catch(err => console.error(err));
     } else {
       audio.pause();
-      this.isPlaying = false;
     }
   }
 }
