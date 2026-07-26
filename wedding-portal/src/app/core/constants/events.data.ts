@@ -11,6 +11,6 @@ export const EVENTS_DATA: WeddingEvent[] = [
     title: 'Wedding Ceremony',
     date: 'Sunday, 30 August 2026',
     time: '07:35 AM Onwards',
-    venue: 'Pushpavaneswarar Sivan Temple, Avalpoondurai Road, Erode, Tamil Nadu 638115'
+    venue: 'Sarasu Thirumana Mahal, Avalpoondurai Road, Erode, Tamil Nadu 638115'
   }
 ];
